@@ -2,21 +2,13 @@
 using System.Collections;
 
 public class OpenPresent : MonoBehaviour
-{    
-    public GameObject present;
+{   
+    public GameObject contains;
 
-    void Update()
-    {
-        if (Input.GetMouseButton(0))
-        {
-            //transform.GetChild(2).gameObject.SetActive(true);
-            //gameObject.SetActive(false);
-            Vector3 p = transform.position;
-            Destroy(gameObject);
-            Instantiate(present, p, Quaternion.identity);
+    void OnMouseDown(){
+        Vector3 p = transform.position;
+        this.gameObject.SetActive(false);
+        Instantiate(contains, p, Quaternion.identity);
+  }
 
-
-        }
-
-    }
 }
