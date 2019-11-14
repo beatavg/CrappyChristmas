@@ -17,10 +17,10 @@ MonoBehaviour:
     ufoLicenseKey: QVEvbjJCYi8vLy8vQUFBQUtONHVxSjJMTFVHRXJwd2FNN2pmUDRONUtTdU10cktpY1RFSUFYZnJYUldVVXU0WjlTOUxHWmlmT0hGS2paZGxqZGk2a2wwcmdXS1c4UjhTeU4zRkFVamRmRDJtSldUUEFzMlB2K3RhYnlEMWhNYStNVXRybm5kSW1HbTk1S1ZUTUlaQ2ZwSWdqNEpibWZORkhyOTZnK0w1ZDdESzZEeGpKY0ZRbTNrYUt4Yjl2OEdrN3l0Rldsc2hsK2dETGVwTHkyUjFFRHdHend4TzRwZmRGWm5tWUcwUVREb3p4cU45SlZPdGtDYVBwSlFRbXBqc1RHUEJnY0p2L0phTjZNblIwUitCNXMzaE1DNE11Z2x5WHUyZ2wxMVdCb1RmRU5oNS9SVklWZkVjUVpPR2dDUkNYMzZFcjNsUTdzR3B3bG5JLzc4eVQzckxLeER0NW5BMTh2Q2N2NHRDME1NUDVnQ2ZJQjBScHd6VU1SV2I=
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
-    maxSimultaneousImageTargets: 1
-    maxSimultaneousObjectTargets: 1
+    maxSimultaneousImageTargets: 2
+    maxSimultaneousObjectTargets: 2
     useDelayedLoadingObjectTargets: 0
-    modelTargetRecoWhileExtendedTracked: 1
+    modelTargetRecoWhileExtendedTracked: 0
     version: 8.5.9
     eulaAcceptedVersions: '{"Values":["8.5"]}'
   database:
