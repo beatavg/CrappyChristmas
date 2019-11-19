@@ -8,7 +8,7 @@ public class OpenPresent : MonoBehaviour
     void OnMouseDown(){
         Vector3 p = transform.position;
         this.gameObject.SetActive(false);
-        Instantiate(contains, p, Quaternion.identity);
+        contains.SetActive(true);
   }
 
 }
