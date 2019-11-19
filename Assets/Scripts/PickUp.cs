@@ -13,25 +13,4 @@ public class PickUp : MonoBehaviour
 
         transform.position = objPosition;
     }
-   
-
-
-
-
-
-
-
-
-
-
-
- //public GameObject contains;
-    // void OnMouseDown()
-    // {
-    //         Debug.Log("TRYCKT PÅ BOLLEN!");
-    //         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-    //         if (Physics.Raycast(ray))
-    //             Instantiate(contains, transform.position, transform.rotation);
-        
-    // }
 }
