@@ -8,11 +8,13 @@ public class PickUp : MonoBehaviour
     public GameObject fire;
     public GameObject explosion;
     // private GameObject newFire;
-    // private GameObject ImageTarget;
+    private GameObject ImageTarget;
     void Start()
     {
-        explosion = GameObject.Find("/ImageTarget/LargeFlames Variant");
-        //ImageTarget = GameObject.Find("ImageTarget");
+        //explosion = GameObject.Find("ImageTarget/FireBall Variant");
+        
+        ImageTarget = GameObject.Find("ImageTarget");
+        Debug.Log(ImageTarget);
     }
 
     void OnMouseDrag()
@@ -37,7 +39,9 @@ public class PickUp : MonoBehaviour
     {
         fire.SetActive(true);
         Destroy(this.gameObject);
-        //Instantiate()
+        Instantiate(explosion, transform.position, transform.rotation);
+        explosion.transform.parent = ImageTarget.transform;
+        explosion.SetActive(true);
  
     }
 
