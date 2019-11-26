@@ -5,6 +5,15 @@ using UnityEngine;
 public class PickUp : MonoBehaviour
 {
     float distance = 10;
+    public GameObject fire;
+    public GameObject explosion;
+    // private GameObject newFire;
+    // private GameObject ImageTarget;
+    void Start()
+    {
+        explosion = GameObject.Find("/ImageTarget/LargeFlames Variant");
+        //ImageTarget = GameObject.Find("ImageTarget");
+    }
 
     void OnMouseDrag()
     {
@@ -24,21 +33,12 @@ public class PickUp : MonoBehaviour
         
     }
 
-    void CatchFire()
+    void OnCollisionEnter()
     {
-        Debug.Log("HEEEEEEEJ");
-        if (GetComponent<Rigidbody>().position.x <= 5 && GetComponent<Rigidbody>().position.x >= -5)
-        {
-            if (GetComponent<Rigidbody>().position.z <= 5 && GetComponent<Rigidbody>().position.z >= -5)
-            {
-                Debug.Log("FIREEEEEE");              
-            }
-        }
-    }
-
-    void Update()
-    {
-        CatchFire();
+        fire.SetActive(true);
+        Destroy(this.gameObject);
+        //Instantiate()
+ 
     }
 
 
