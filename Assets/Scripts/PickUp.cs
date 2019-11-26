@@ -41,6 +41,7 @@ public class PickUp : MonoBehaviour
         Destroy(this.gameObject);
         Instantiate(explosion, transform.position, transform.rotation);
         explosion.transform.parent = ImageTarget.transform;
+        //explosion.transform.SetParent(ImageTarget.transform);
         explosion.SetActive(true);
  
     }
