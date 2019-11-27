@@ -35,7 +35,7 @@ public class PickUp : MonoBehaviour
         
     }
 
-    void OnCollisionEnter()
+    void OnTriggerEnter(Collider col)
     {
         fire.SetActive(true);
         Destroy(this.gameObject);

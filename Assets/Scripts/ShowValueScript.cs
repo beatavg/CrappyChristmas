@@ -15,6 +15,6 @@ public class ShowValueScript : MonoBehaviour {
     // Update is called once per frame
     public void textUpdate (float value)
     {
-        co2Text.text = Mathf.RoundToInt(value * 100) + "kg CO2";
+        co2Text.text = Mathf.RoundToInt(value * 100) + "kg CO2 released";
     }
 }
