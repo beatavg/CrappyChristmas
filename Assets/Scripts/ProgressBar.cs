@@ -31,8 +31,11 @@ public class ProgressBar : MonoBehaviour
     private void Update()
     {
         slider.value = CO2 / maxCO2;
-        slider.value += FillSpeed * Time.deltaTime;
-        //slider.fillAmount = CO2 / minCO2;
+
+        if (!particleSys.isPlaying)
+        particleSys.Play();
+    //slider.value += FillSpeed * Time.deltaTime;
+    //slider.fillAmount = CO2 / minCO2;
     }
     // Update is called once per frame
     //void Update()
