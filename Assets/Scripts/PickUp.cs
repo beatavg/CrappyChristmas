@@ -9,12 +9,16 @@ public class PickUp : MonoBehaviour
     public GameObject explosion;
     // private GameObject newFire;
     private GameObject ImageTarget;
+    private Vector3 startPos;
+    public GameObject present;
+    
     void Start()
     {
         //explosion = GameObject.Find("ImageTarget/FireBall Variant");
         
         ImageTarget = GameObject.Find("ImageTarget");
         Debug.Log(ImageTarget);
+        startPos = transform.position;
     }
 
     void OnMouseDrag()
@@ -35,15 +39,17 @@ public class PickUp : MonoBehaviour
         
     }
 
-    void OnCollisionEnter()
+    void OnTriggerEnter(Collider col)
     {
         fire.SetActive(true);
-        Destroy(this.gameObject);
-        Instantiate(explosion, transform.position, transform.rotation);
-        explosion.transform.parent = ImageTarget.transform;
+        this.gameObject.SetActive(false);
+        this.gameObject.transform.position = startPos;
+        //Instantiate(explosion, transform.position, transform.rotation);
+        //explosion.transform.parent = ImageTarget.transform;
         //explosion.transform.SetParent(ImageTarget.transform);
-        explosion.SetActive(true);
- 
+        //explosion.SetActive(true);
+
+        this.gameObject.SetActive(true);
     }
 
 

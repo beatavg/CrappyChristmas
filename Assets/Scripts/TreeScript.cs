@@ -9,18 +9,15 @@ public class TreeScript : MonoBehaviour
     {
         if (col.tag == "Shoe")
         {
-            ProgressBar.CO2 += 10f;
-            Debug.Log("skooor");
+            ProgressBar.CO2 += 100;
         }
         else if (col.tag == "Ball")
         {
-            ProgressBar.CO2 += 30f;
-            Debug.Log("Baaall");
+            ProgressBar.CO2 += 60;
         }
         else if (col.tag == "Toy")
         {
-            ProgressBar.CO2 += 40f;
-            Debug.Log("Toy");
+            ProgressBar.CO2 += 50;
         }
 
     }
