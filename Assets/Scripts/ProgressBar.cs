@@ -33,7 +33,9 @@ public class ProgressBar : MonoBehaviour
         slider.value = CO2 / maxCO2;
 
         if (!particleSys.isPlaying)
-        particleSys.Play();
+        {
+            particleSys.Play();
+        }
     //slider.value += FillSpeed * Time.deltaTime;
     //slider.fillAmount = CO2 / minCO2;
     }
