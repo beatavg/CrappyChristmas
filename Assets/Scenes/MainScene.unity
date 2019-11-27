@@ -493,6 +493,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: f3f1777a77a404951aa67c75c5be913e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Shoe
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f3f1777a77a404951aa67c75c5be913e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5530,6 +5535,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: ca20568c6497542018b69d875d208a42,
+        type: 3}
+      propertyPath: m_TagString
+      value: Toy
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: ca20568c6497542018b69d875d208a42,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6919,6 +6929,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1a7371d847ae648628d35d813bdcbe34,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ball
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1a7371d847ae648628d35d813bdcbe34,
         type: 3}
