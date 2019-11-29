@@ -49,7 +49,7 @@ public class PickUp : MonoBehaviour
         //explosion.transform.SetParent(ImageTarget.transform);
         //explosion.SetActive(true);
 
-        this.gameObject.SetActive(true);
+        //this.gameObject.SetActive(true);
     }
 
 
