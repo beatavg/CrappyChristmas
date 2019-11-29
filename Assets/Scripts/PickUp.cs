@@ -7,6 +7,7 @@ public class PickUp : MonoBehaviour
     float distance = 10;
     public GameObject fire;
     public GameObject explosion;
+    public GameObject smoke;
     // private GameObject newFire;
     private GameObject ImageTarget;
     private Vector3 startPos;
@@ -42,6 +43,7 @@ public class PickUp : MonoBehaviour
     void OnTriggerEnter(Collider col)
     {
         fire.SetActive(true);
+        smoke.SetActive(true);
         this.gameObject.SetActive(false);
         this.gameObject.transform.position = startPos;
         //Instantiate(explosion, transform.position, transform.rotation);
