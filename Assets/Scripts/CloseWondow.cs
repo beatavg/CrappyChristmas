@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CloseWondow : MonoBehaviour
 {
     public Button button;
-    public GameObject window = GameObject.Find("/Canvas/Image");
+    public GameObject window;
     void Start()
     {
         button.onClick.AddListener(Close);
