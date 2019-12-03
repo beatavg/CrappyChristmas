@@ -7,7 +7,7 @@ public class PickUp : MonoBehaviour
     float distance = 10;
     public GameObject fire;
     public GameObject smoke;
-    public GameObject explosion;
+    public GameObject presentFirePrefab;
     // private GameObject newFire;
     private GameObject ImageTarget;
     private Vector3 startPos;
@@ -46,6 +46,12 @@ public class PickUp : MonoBehaviour
         smoke.SetActive(true);
         this.gameObject.SetActive(false);
         this.gameObject.transform.position = startPos;
+
+        GameObject clone = Instantiate(presentFirePrefab, transform.position, transform.rotation, ImageTarget.transform);
+        clone.SetActive(true);
+        //clone.transform.position = startPos;
+
+
         //Instantiate(explosion, transform.position, transform.rotation);
         //explosion.transform.parent = ImageTarget.transform;
         //explosion.transform.SetParent(ImageTarget.transform);
