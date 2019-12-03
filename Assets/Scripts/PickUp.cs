@@ -43,12 +43,16 @@ public class PickUp : MonoBehaviour
     void OnTriggerEnter(Collider col)
     {
         fire.SetActive(true);
-        smoke.SetActive(true);
+        //smoke.SetActive(true);
         this.gameObject.SetActive(false);
+        Vector3 endPosition = this.gameObject.transform.position;
         this.gameObject.transform.position = startPos;
 
-        GameObject clone = Instantiate(presentFirePrefab, transform.position, transform.rotation, ImageTarget.transform);
-        clone.SetActive(true);
+        GameObject clone = Instantiate(presentFirePrefab, endPosition, transform.rotation, ImageTarget.transform);
+        int randomTimer = (int)Random.Range(1.0f, 4.0f);
+        Destroy(clone, randomTimer);
+        
+        //clone.SetActive(true);
         //clone.transform.position = startPos;
 
 
