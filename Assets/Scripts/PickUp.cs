@@ -51,17 +51,7 @@ public class PickUp : MonoBehaviour
         GameObject clone = Instantiate(presentFirePrefab, endPosition, transform.rotation, ImageTarget.transform);
         int randomTimer = (int)Random.Range(1.0f, 4.0f);
         Destroy(clone, randomTimer);
-        
-        //clone.SetActive(true);
-        //clone.transform.position = startPos;
 
-
-        //Instantiate(explosion, transform.position, transform.rotation);
-        //explosion.transform.parent = ImageTarget.transform;
-        //explosion.transform.SetParent(ImageTarget.transform);
-        //explosion.SetActive(true);
-
-        //this.gameObject.SetActive(true);
     }
 
 
