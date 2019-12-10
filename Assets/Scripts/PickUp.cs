@@ -43,7 +43,7 @@ public class PickUp : MonoBehaviour
     void OnTriggerEnter(Collider col)
     {
         fire.SetActive(true);
-        //smoke.SetActive(true);
+        smoke.SetActive(true);
         this.gameObject.SetActive(false);
         Vector3 endPosition = this.gameObject.transform.position;
         this.gameObject.transform.position = startPos;
