@@ -7,16 +7,16 @@ public class TreeScript : MonoBehaviour
 {
 
     public GameObject Sphere;
-    //public GameObject WhiteSmoke;
+    public GameObject WhiteSmoke;
 
     private void OnTriggerEnter(Collider col)
     {
-        //WhiteSmoke.SetActive(true);
-        //Debug.Log("WhiteSmoke!");
+        WhiteSmoke.SetActive(true);
+        Debug.Log("WhiteSmoke!");
         var lt = Sphere.GetComponent<Light>();
         lt.intensity = lt.intensity + 5F;
-        //WhiteSmoke.SetActive(true);
-        Debug.Log(lt.intensity);
+        WhiteSmoke.SetActive(true);
+        Debug.Log("Light intensifies!");
 
         if (col.tag == "Shoe")
         {
