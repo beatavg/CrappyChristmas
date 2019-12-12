@@ -903,6 +903,7 @@ MonoBehaviour:
   heatPrefab: {fileID: 6624976438714765949, guid: b59ef95749b294df5ad1452f69c90f97,
     type: 3}
   present: {fileID: 1146853782}
+  burnedPresents: 0
   fires:
   - {fileID: 1917717015}
   - {fileID: 936938932}
@@ -1625,6 +1626,7 @@ MonoBehaviour:
   heatPrefab: {fileID: 6624976438714765949, guid: b59ef95749b294df5ad1452f69c90f97,
     type: 3}
   present: {fileID: 1246147109}
+  burnedPresents: 0
   fires:
   - {fileID: 1917717015}
   - {fileID: 936938932}
@@ -7121,6 +7123,7 @@ MonoBehaviour:
   heatPrefab: {fileID: 6624976438714765949, guid: b59ef95749b294df5ad1452f69c90f97,
     type: 3}
   present: {fileID: 227961979}
+  burnedPresents: 0
   fires:
   - {fileID: 1917717015}
   - {fileID: 936938932}
@@ -7818,6 +7821,7 @@ MonoBehaviour:
   heatPrefab: {fileID: 6624976438714765949, guid: b59ef95749b294df5ad1452f69c90f97,
     type: 3}
   present: {fileID: 1496572409}
+  burnedPresents: 0
   fires:
   - {fileID: 1917717015}
   - {fileID: 936938932}
@@ -8184,6 +8188,7 @@ MonoBehaviour:
   heatPrefab: {fileID: 6624976438714765949, guid: b59ef95749b294df5ad1452f69c90f97,
     type: 3}
   present: {fileID: 1069321692}
+  burnedPresents: 0
   fires:
   - {fileID: 1917717015}
   - {fileID: 936938932}
@@ -9746,6 +9751,7 @@ MonoBehaviour:
   heatPrefab: {fileID: 6624976438714765949, guid: b59ef95749b294df5ad1452f69c90f97,
     type: 3}
   present: {fileID: 1506018}
+  burnedPresents: 0
   fires:
   - {fileID: 1917717015}
   - {fileID: 936938932}
@@ -10568,6 +10574,7 @@ MonoBehaviour:
   heatPrefab: {fileID: 6624976438714765949, guid: b59ef95749b294df5ad1452f69c90f97,
     type: 3}
   present: {fileID: 1742105377}
+  burnedPresents: 0
   fires:
   - {fileID: 1917717015}
   - {fileID: 936938932}
@@ -10990,7 +10997,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 71137bd1538ce450f845dafa581fb8e7,
         type: 3}
       propertyPath: m_Name
-      value: santa_hat(BLENDER)
+      value: santa_hat
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 71137bd1538ce450f845dafa581fb8e7,
         type: 3}
@@ -11314,6 +11321,7 @@ MonoBehaviour:
   heatPrefab: {fileID: 6624976438714765949, guid: b59ef95749b294df5ad1452f69c90f97,
     type: 3}
   present: {fileID: 691647966}
+  burnedPresents: 0
   fires:
   - {fileID: 1917717015}
   - {fileID: 936938932}
