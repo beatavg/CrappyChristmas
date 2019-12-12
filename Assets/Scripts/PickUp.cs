@@ -15,6 +15,9 @@ public class PickUp : MonoBehaviour
     private Vector3 startPos;
     public GameObject present;
     private int burnedPresents;
+    //public GameObject test;
+
+    public GameObject[] fires;
     
     void Start()
     {
@@ -47,20 +50,23 @@ public class PickUp : MonoBehaviour
     void OnTriggerEnter(Collider col)
     {
         //Activate tree fire and activate smoke
-        fire.SetActive(true);
+        //fire.SetActive(true);
+        fires[burnedPresents].SetActive(true);
         smoke.SetActive(true);
-        ++burnedPresents;
-        if (burnedPresents == 1)
-        {
-            heat.SetActive(true);
-            Debug.Log("heat " + burnedPresents);
-        }
-        else if(burnedPresents >= 1)
-        {
-            heat.transform.localScale += new Vector3(0f, 1f, 0f);
-            Debug.Log("else " + burnedPresents);
-        }
+        Debug.Log("här " + burnedPresents);
+        // if (burnedPresents == 0)
+        // {
+        //     //fires[1].SetActive(true);
+        //     //heat.SetActive(true);
+        //     Debug.Log("här "+ burnedPresents);
+        // }
+        // if(burnedPresents > 1)
+        // {
+        //     //heat.transform.localScale += new Vector3(0f, 1f, 0f);
+        //     Debug.Log("där " + burnedPresents);
+        // }
 
+        burnedPresents += 1;
         //Deactivate present and store position
         this.gameObject.SetActive(false);
         Vector3 endPosition = this.gameObject.transform.position;
@@ -70,13 +76,14 @@ public class PickUp : MonoBehaviour
         GameObject fireClone = Instantiate(presentFirePrefab, endPosition, transform.rotation, ImageTarget.transform);
         GameObject heatClone = Instantiate(heatPrefab, endPosition, transform.rotation, ImageTarget.transform);
         //Debug.Log(heatClone.transform.localRotation);
-        
-        heatClone.transform.localScale = new Vector3(0.5f, 2f, 0.5f);
+        //GameObject fireTreeClone = Instantiate(fires[burnedPresents], new Vector3(0f,0f,0f), transform.rotation, ImageTarget.transform);
+       
+        //heatClone.transform.localScale = new Vector3(0.5f, 2f, 0.5f);
         //heatClone.transform.localRotation = fireClone.transform.localRotation;
         //heatClone.transform.localRotation = new Quaternion(heatClone.transform.localRotation.x, heatClone.transform.localRotation.y, -360f);
         //heatClone.transform.Rotate = (0f, 0f, 0f, Self.World);
             //= (0, 0, -360);
-
+        //test.SetActive(true);
         // Make those present effects disappear
         //GameObject clone = Instantiate(presentFirePrefab, endPosition, transform.rotation, ImageTarget.transform);
         int randomTimer = (int)Random.Range(1.0f, 4.0f);
