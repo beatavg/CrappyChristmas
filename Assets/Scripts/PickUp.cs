@@ -14,7 +14,10 @@ public class PickUp : MonoBehaviour
     private GameObject ImageTarget;
     private Vector3 startPos;
     public GameObject present;
-    private int burnedPresents;
+    public int burnedPresents;
+    //public GameObject test;
+
+    public GameObject[] fires;
     
     void Start()
     {
@@ -23,7 +26,6 @@ public class PickUp : MonoBehaviour
         ImageTarget = GameObject.Find("ImageTarget");
         Debug.Log(ImageTarget);
         startPos = transform.position;
-        burnedPresents = 0;
     }
 
     void OnMouseDrag()
@@ -46,21 +48,53 @@ public class PickUp : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
+        //Debug.Log("Apa");
         //Activate tree fire and activate smoke
-        fire.SetActive(true);
+        //fire.SetActive(true);
+        fires[burnedPresents].SetActive(true);
         smoke.SetActive(true);
+        Debug.Log("först " + burnedPresents);
         ++burnedPresents;
-        if (burnedPresents == 1)
-        {
-            heat.SetActive(true);
-            Debug.Log("heat " + burnedPresents);
-        }
-        else if(burnedPresents >= 1)
-        {
-            heat.transform.localScale += new Vector3(0f, 1f, 0f);
-            Debug.Log("else " + burnedPresents);
-        }
 
+        //Debug.Log(ImageTarget.transform.Find("FireBall Variant (1)").gameObject);
+
+        // Find the other presents
+        GameObject truck = ImageTarget.transform.Find("Toy_Truck").gameObject;
+        GameObject shoe = ImageTarget.transform.Find("shoe").gameObject;
+        GameObject ball = ImageTarget.transform.Find("Soccer_Ball").gameObject;
+        GameObject penguin = ImageTarget.transform.Find("PENGUIN").gameObject;
+        GameObject rabbit = ImageTarget.transform.Find("RABBIT").gameObject;
+        GameObject pig = ImageTarget.transform.Find("PIG").gameObject;
+        GameObject pants = ImageTarget.transform.Find("Pants").gameObject;
+        GameObject santa = ImageTarget.transform.Find("santa_hat").gameObject;
+
+        // Update burnedPresents
+        truck.GetComponent<PickUp>().burnedPresents = burnedPresents;
+        shoe.GetComponent<PickUp>().burnedPresents = burnedPresents;
+        ball.GetComponent<PickUp>().burnedPresents = burnedPresents;
+        penguin.GetComponent<PickUp>().burnedPresents = burnedPresents;
+        rabbit.GetComponent<PickUp>().burnedPresents = burnedPresents;
+        pig.GetComponent<PickUp>().burnedPresents = burnedPresents;
+        pants.GetComponent<PickUp>().burnedPresents = burnedPresents;
+        santa.GetComponent<PickUp>().burnedPresents = burnedPresents;
+
+        Debug.Log("här : " + burnedPresents);
+        Debug.Log("härobjekt: " + this.burnedPresents);
+        Debug.Log("där : " + pig.GetComponent<PickUp>().burnedPresents);
+        //Debug.Log("sedan " + burnedPresents);
+        // if (burnedPresents == 0)
+        // { 
+        //     //fires[1].SetActive(true);
+        //     //heat.SetActive(true);
+        //     Debug.Log("här "+ burnedPresents);
+        // }
+        // if(burnedPresents > 1)
+        // {
+        //     //heat.transform.localScale += new Vector3(0f, 1f, 0f);
+        //     Debug.Log("där " + burnedPresents);
+        // }
+
+        //burnedPresents += 1;
         //Deactivate present and store position
         this.gameObject.SetActive(false);
         Vector3 endPosition = this.gameObject.transform.position;
@@ -68,20 +102,21 @@ public class PickUp : MonoBehaviour
 
         // Create present effects (fire, heat distortion) disappear
         GameObject fireClone = Instantiate(presentFirePrefab, endPosition, transform.rotation, ImageTarget.transform);
-        GameObject heatClone = Instantiate(heatPrefab, endPosition, transform.rotation, ImageTarget.transform);
+        //GameObject heatClone = Instantiate(heatPrefab, endPosition, transform.rotation, ImageTarget.transform);
         //Debug.Log(heatClone.transform.localRotation);
-        
-        heatClone.transform.localScale = new Vector3(0.5f, 2f, 0.5f);
+        //GameObject fireTreeClone = Instantiate(fires[burnedPresents], new Vector3(0f,0f,0f), transform.rotation, ImageTarget.transform);
+       
+        //heatClone.transform.localScale = new Vector3(0.5f, 2f, 0.5f);
         //heatClone.transform.localRotation = fireClone.transform.localRotation;
         //heatClone.transform.localRotation = new Quaternion(heatClone.transform.localRotation.x, heatClone.transform.localRotation.y, -360f);
         //heatClone.transform.Rotate = (0f, 0f, 0f, Self.World);
             //= (0, 0, -360);
-
+        //test.SetActive(true);
         // Make those present effects disappear
         //GameObject clone = Instantiate(presentFirePrefab, endPosition, transform.rotation, ImageTarget.transform);
         int randomTimer = (int)Random.Range(1.0f, 4.0f);
         Destroy(fireClone, randomTimer);
-        Destroy(heatClone, randomTimer);
+        //Destroy(heatClone, randomTimer);
 
     }
 
