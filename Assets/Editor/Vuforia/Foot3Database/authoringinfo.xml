@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARInfo>
+<TargetSet version="17.0" toolVersion="8.6.7">
+<ModelTarget name="Foot3" targetId="ada6c7ce0b2b4ecbb39e11e6a3e44ef1" version="11.1" toolVersion="8.6.7" bbox="-0.034000 -0.019000 0.000000 0.015021 0.029090 0.031000" previewImage="ada6c7ce0b2b4ecbb39e11e6a3e44ef1_preview.jpg"/>
+
+</TargetSet>
+
+<Assembly name="Foot3s_assembly" assemblyId="35d8fa2fb8434596a599d8766da6d640">
+<Part name="Foot3" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="viewpoint_0000" translation="0.0101365 0.0104944 0.0735986" rotation="AD: -0.3655173048050967 1.5892298164338539 -1.1949899950036913 195.483" image="Foot3_viewpoint_0000.png" trained="yes">
+
+</EntryPoint>
+
+</Assembly>
+
+</QCARInfo>

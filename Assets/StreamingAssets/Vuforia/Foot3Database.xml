@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+<Tracking>
+<ModelTarget name="Foot3" motionHint="static"/>
+
+</Tracking>
+
+<Assembly name="Foot3s_assembly" assemblyId="35d8fa2fb8434596a599d8766da6d640">
+<Part name="Foot3" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="viewpoint_0000" translation="0.0101365 0.0104944 0.0735986" rotation="AD: -0.3655173048050967 1.5892298164338539 -1.1949899950036913 195.483" trained="yes">
+
+</EntryPoint>
+
+</Assembly>
+
+</QCARConfig>
