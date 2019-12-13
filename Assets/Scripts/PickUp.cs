@@ -23,7 +23,7 @@ public class PickUp : MonoBehaviour
     {
         //explosion = GameObject.Find("ImageTarget/FireBall Variant");
         
-        ImageTarget = GameObject.Find("ImageTarget");
+        ImageTarget = GameObject.Find("ModelTarget");
         Debug.Log(ImageTarget);
         startPos = transform.position;
     }
